@@ -2,6 +2,7 @@ do /Users/vladimirkuzmich/work/depot/bin/bundle exec /Users/vladimirkuzmich/.rvm
 Ruby enVironment Manager 1.29.10 (latest) (c) 2009-2017 Michal Papis, Piotr Kuczynski, Wayne E. Seguin
 
                                Prefix Verb   URI Pattern                                                                              Controller#Action
+                          store_index GET    /store_index(.:format)                                                                   store#index
                              products GET    /products(.:format)                                                                      products#index
                                       POST   /products(.:format)                                                                      products#create
                           new_product GET    /products/new(.:format)                                                                  products#new

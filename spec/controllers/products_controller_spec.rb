@@ -6,7 +6,7 @@ RSpec.describe ProductsController, type: :controller do
   let(:valid_product) {
     { title: 'phoneseev',
       description: 'very good one',
-      image_url: '3f.jpg',
+      image_url: '7apps.jpg',
       price: 24
     }}
 
