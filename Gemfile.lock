@@ -74,8 +74,15 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
+    database_cleaner (1.8.5)
     diff-lcs (1.4.4)
     erubi (1.9.0)
+    factory_bot (6.1.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.1.0)
+      factory_bot (~> 6.1.0)
+      railties (>= 5.0.0)
+    ffaker (2.17.0)
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -125,6 +132,10 @@ GEM
       bundler (>= 1.3.0)
       railties (= 6.0.3.4)
       sprockets-rails (>= 2.0.0)
+    rails-controller-testing (1.0.5)
+      actionpack (>= 5.0.1.rc1)
+      actionview (>= 5.0.1.rc1)
+      activesupport (>= 5.0.1.rc1)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -141,7 +152,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.8.2)
-    rspec-core (3.9.2)
+    rspec-core (3.9.3)
       rspec-support (~> 3.9.3)
     rspec-expectations (3.9.2)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -172,7 +183,7 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
-    shoulda-matchers (4.3.0)
+    shoulda-matchers (4.4.1)
       activesupport (>= 4.2.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
@@ -221,10 +232,14 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  database_cleaner
+  factory_bot_rails
+  ffaker
   jbuilder (~> 2.7)
   listen (~> 3.2)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.3)
+  rails-controller-testing
   rspec-rails
   sass-rails (>= 6)
   selenium-webdriver

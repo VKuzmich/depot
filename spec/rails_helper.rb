@@ -1,16 +1,17 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'simplecov'
-SimpleCov.start 'rails'
+# require 'simplecov'
+require 'factory_bot_rails'
+# SimpleCov.start 'rails'
 
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort('The Rails env is running in prod. mode!') if Rails.env.production?
 require 'rspec/rails'
-# require 'database_cleaner'
-# require 'ffaker'
+require 'database_cleaner'
+require 'ffaker'
 require 'shoulda/matchers'
 
 begin
@@ -24,13 +25,18 @@ RSpec.configure do |config|
   # config.include FactoryBot::Syntax::Methods
 
   config.use_transactional_fixtures = false
-  # config.before(:suite) { DatabaseCleaner.clean_with(:truncation) }
-  # config.before(:each) { DatabaseCleaner.strategy = :transaction }
-  # config.before(:each, js: true) { DatabaseCleaner.strategy = :truncation }
-  # config.before(:each) { DatabaseCleaner.start }
-  # config.after(:each) { DatabaseCleaner.clean }
-  # config.before(:all) { DatabaseCleaner.start }
-  # config.after(:all) { DatabaseCleaner.clean }
+  config.include FactoryBot::Syntax::Methods
+
+  config.before(:suite) do
+    begin
+      DatabaseCleaner[:active_record].strategy = :transaction
+      DatabaseCleaner.clean_with(:truncation)
+      DatabaseCleaner.start
+      FactoryBot.lint
+    ensure
+      DatabaseCleaner.clean
+    end
+  end
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
 end
@@ -40,6 +46,10 @@ Shoulda::Matchers.configure do |config|
     with.test_framework :rspec
     with.library :rails
   end
+end
+
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
 end
 
 # RSpec.configure do |config|

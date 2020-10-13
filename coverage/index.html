@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-10-13T10:23:32+03:00">2020-10-13T10:23:32+03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-10-13T10:48:08+03:00">2020-10-13T10:48:08+03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="red">
-  12.0%
+  10.59%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.12
+         0.11
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>75</b> relevant lines,
+    <b>85</b> relevant lines,
     <span class="green"><b>9</b> lines covered</span> and
-    <span class="red"><b>66</b> lines missed. </span>
+    <span class="red"><b>76</b> lines missed. </span>
     (<span class="red">
-  12.0%
+  10.59%
 </span>
 )
   </div>
@@ -106,10 +106,10 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#ac78abe0a61e31ae3862e3b9fd141fd43b4eb94d" class="src_link" title="app/controllers/products_controller.rb">app/controllers/products_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">74</td>
-            <td class="cell--number">50</td>
+            <td class="cell--number">81</td>
+            <td class="cell--number">60</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">50</td>
+            <td class="cell--number">60</td>
             <td class="cell--number">0.00</td>
             
           </tr>
@@ -212,9 +212,9 @@
   </div>
 
   <div class="t-line-summary">
-    <b>52</b> relevant lines,
+    <b>62</b> relevant lines,
     <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>52</b> lines missed. </span>
+    <span class="red"><b>62</b> lines missed. </span>
     (<span class="red">
   0.0%
 </span>
@@ -253,10 +253,10 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#ac78abe0a61e31ae3862e3b9fd141fd43b4eb94d" class="src_link" title="app/controllers/products_controller.rb">app/controllers/products_controller.rb</a></td>
             <td class="red strong cell--number t-file__coverage">0.00 %</td>
-            <td class="cell--number">74</td>
-            <td class="cell--number">50</td>
+            <td class="cell--number">81</td>
+            <td class="cell--number">60</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">50</td>
+            <td class="cell--number">60</td>
             <td class="cell--number">0.00</td>
             
           </tr>
@@ -930,9 +930,9 @@
     
 
     <div class="t-line-summary">
-      <b>50</b> relevant lines.
+      <b>60</b> relevant lines.
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>50</b> lines missed.</span>
+      <span class="red"><b>60</b> lines missed.</span>
     </div>
 
     
@@ -1240,13 +1240,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="missed" data-hits="0" data-linenumber="28">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    respond_to do |format|</code>
           </li>
         </div>
       
@@ -1257,7 +1257,7 @@
 
             
 
-            <code class="ruby">    respond_to do |format|</code>
+            <code class="ruby">      if @product.save</code>
           </li>
         </div>
       
@@ -1268,7 +1268,7 @@
 
             
 
-            <code class="ruby">      if @product.save</code>
+            <code class="ruby">        format.html do</code>
           </li>
         </div>
       
@@ -1279,7 +1279,7 @@
 
             
 
-            <code class="ruby">        format.html { redirect_to @product, notice: &#39;Product was successfully created.&#39; }</code>
+            <code class="ruby">          redirect_to @product,</code>
           </li>
         </div>
       
@@ -1290,7 +1290,7 @@
 
             
 
-            <code class="ruby">        format.json { render :show, status: :created, location: @product }</code>
+            <code class="ruby">                      notice: &#39;Product was successfully created.&#39;</code>
           </li>
         </div>
       
@@ -1301,7 +1301,7 @@
 
             
 
-            <code class="ruby">      else</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -1312,7 +1312,7 @@
 
             
 
-            <code class="ruby">        format.html { render :new }</code>
+            <code class="ruby">        format.json do</code>
           </li>
         </div>
       
@@ -1323,7 +1323,7 @@
 
             
 
-            <code class="ruby">        format.json { render json: @product.errors, status: :unprocessable_entity }</code>
+            <code class="ruby">          render :show, status: :created,</code>
           </li>
         </div>
       
@@ -1334,7 +1334,7 @@
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">                        location: @product</code>
           </li>
         </div>
       
@@ -1345,7 +1345,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -1356,40 +1356,40 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      else</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
+          <li class="missed" data-hits="0" data-linenumber="39">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">        puts @product.errors.full_messages</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
+          <li class="missed" data-hits="0" data-linenumber="40">
             
             
 
             
 
-            <code class="ruby">  # PATCH/PUT /products/1</code>
+            <code class="ruby">        format.html { render :new }</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="missed" data-hits="0" data-linenumber="41">
             
             
 
             
 
-            <code class="ruby">  # PATCH/PUT /products/1.json</code>
+            <code class="ruby">        format.json do</code>
           </li>
         </div>
       
@@ -1400,7 +1400,7 @@
 
             
 
-            <code class="ruby">  def update</code>
+            <code class="ruby">          render json: @product.errors,</code>
           </li>
         </div>
       
@@ -1411,7 +1411,7 @@
 
             
 
-            <code class="ruby">    respond_to do |format|</code>
+            <code class="ruby">                 status: :unprocessable_entity</code>
           </li>
         </div>
       
@@ -1422,7 +1422,7 @@
 
             
 
-            <code class="ruby">      if @product.update(product_params)</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -1433,7 +1433,7 @@
 
             
 
-            <code class="ruby">        format.html { redirect_to @product, notice: &#39;Product was successfully updated.&#39; }</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -1444,7 +1444,7 @@
 
             
 
-            <code class="ruby">        format.json { render :show, status: :ok, location: @product }</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1455,40 +1455,40 @@
 
             
 
-            <code class="ruby">      else</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="48">
+          <li class="never" data-hits="" data-linenumber="48">
             
             
 
             
 
-            <code class="ruby">        format.html { render :edit }</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="49">
+          <li class="never" data-hits="" data-linenumber="49">
             
             
 
             
 
-            <code class="ruby">        format.json { render json: @product.errors, status: :unprocessable_entity }</code>
+            <code class="ruby">  # PATCH/PUT /products/1</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="50">
+          <li class="never" data-hits="" data-linenumber="50">
             
             
 
             
 
-            <code class="ruby">      end</code>
+            <code class="ruby">  # PATCH/PUT /products/1.json</code>
           </li>
         </div>
       
@@ -1499,7 +1499,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  def update</code>
           </li>
         </div>
       
@@ -1510,40 +1510,40 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    respond_to do |format|</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="53">
+          <li class="missed" data-hits="0" data-linenumber="53">
             
             
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      if @product.update(product_params)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="54">
+          <li class="missed" data-hits="0" data-linenumber="54">
             
             
 
             
 
-            <code class="ruby">  # DELETE /products/1</code>
+            <code class="ruby">        format.html { redirect_to @product, notice: &#39;Product was successfully updated.&#39; }</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="55">
+          <li class="missed" data-hits="0" data-linenumber="55">
             
             
 
             
 
-            <code class="ruby">  # DELETE /products/1.json</code>
+            <code class="ruby">        format.json { render :show, status: :ok, location: @product }</code>
           </li>
         </div>
       
@@ -1554,7 +1554,7 @@
 
             
 
-            <code class="ruby">  def destroy</code>
+            <code class="ruby">      else</code>
           </li>
         </div>
       
@@ -1565,7 +1565,7 @@
 
             
 
-            <code class="ruby">    @product.destroy</code>
+            <code class="ruby">        format.html { render :edit }</code>
           </li>
         </div>
       
@@ -1576,7 +1576,7 @@
 
             
 
-            <code class="ruby">    respond_to do |format|</code>
+            <code class="ruby">        format.json { render json: @product.errors, status: :unprocessable_entity }</code>
           </li>
         </div>
       
@@ -1587,7 +1587,7 @@
 
             
 
-            <code class="ruby">      format.html { redirect_to products_url, notice: &#39;Product was successfully destroyed.&#39; }</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -1598,7 +1598,7 @@
 
             
 
-            <code class="ruby">      format.json { head :no_content }</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1609,18 +1609,18 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="62">
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1631,29 +1631,29 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  # DELETE /products/1</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="64">
+          <li class="never" data-hits="" data-linenumber="64">
             
             
 
             
 
-            <code class="ruby">  private</code>
+            <code class="ruby">  # DELETE /products/1.json</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="missed" data-hits="0" data-linenumber="65">
             
             
 
             
 
-            <code class="ruby">    # Use callbacks to share common setup or constraints between actions.</code>
+            <code class="ruby">  def destroy</code>
           </li>
         </div>
       
@@ -1664,7 +1664,7 @@
 
             
 
-            <code class="ruby">    def set_product</code>
+            <code class="ruby">    @product.destroy</code>
           </li>
         </div>
       
@@ -1675,7 +1675,7 @@
 
             
 
-            <code class="ruby">      @product = Product.find(params[:id])</code>
+            <code class="ruby">    respond_to do |format|</code>
           </li>
         </div>
       
@@ -1686,29 +1686,29 @@
 
             
 
+            <code class="ruby">      format.html { redirect_to products_url, notice: &#39;Product was successfully destroyed.&#39; }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="69">
+            
+            
+
+            
+
+            <code class="ruby">      format.json { head :no_content }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="70">
+            
+            
+
+            
+
             <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="69">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="70">
-            
-            
-
-            
-
-            <code class="ruby">    # Only allow a list of trusted parameters through.</code>
           </li>
         </div>
       
@@ -1719,18 +1719,18 @@
 
             
 
-            <code class="ruby">    def product_params</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="72">
+          <li class="never" data-hits="" data-linenumber="72">
             
             
 
             
 
-            <code class="ruby">      params.require(:product).permit(:title, :description, :image_url, :price)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1741,12 +1741,89 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  private</code>
           </li>
         </div>
       
         <div>
           <li class="missed" data-hits="0" data-linenumber="74">
+            
+            
+
+            
+
+            <code class="ruby">  def set_product</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="75">
+            
+            
+
+            
+
+            <code class="ruby">    @product = Product.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="76">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="77">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="78">
+            
+            
+
+            
+
+            <code class="ruby">  def product_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="79">
+            
+            
+
+            
+
+            <code class="ruby">    params.require(:product).permit(:title, :description, :image_url, :price)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="80">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="81">
             
             
 
