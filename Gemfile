@@ -39,7 +39,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
+  gem 'rails-controller-testing'
 end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -51,7 +51,7 @@ group :development do
   gem 'ffaker'
   gem 'factory_bot_rails'
   gem 'database_cleaner'
-  gem 'rails-controller-testing'
+
 
 end
 
@@ -62,7 +62,7 @@ group :test do
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
   # gem 'shoulda-matchers'
-  gem 'rails-controller-testing'
+  # gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

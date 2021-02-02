@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     post 'login' => :create
     delete 'logout' => :destroy
   end
+  
+  resources :support_requests, only: %i[index update]
 
   get 'sessions/create'
   get 'sessions/destroy'
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
     resources :orders
     resources :line_items
     resources :carts
-    root 'store#index', as: 'store_index'
+    root 'store#index', as: 'store_index', via: :all
   end
   resources :products
   resources :products do
